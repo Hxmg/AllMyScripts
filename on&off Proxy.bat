@@ -4,12 +4,12 @@ For /f "tokens=3" %%i in ('Reg Query "HKCU\Software\Microsoft\Windows\CurrentVer
 
 if %a% == 0x1 (
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 0 /f 
-echo 系统代理已经关闭
+echo Proxy Disabled
 goto endd
 ) else (
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f 
-echo 系统代理已经打开
+echo Proxy Enable
 
 )
 
